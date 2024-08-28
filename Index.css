@@ -17,8 +17,7 @@ body {
   text-align: center;
   width: 100%;
   max-width: 700px;
-  height: 100%;
-  max-height: 450px;
+  height: fit-content;
   padding-top: 0px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -75,11 +74,11 @@ body {
   color: #ffffff;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .score-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .vs {
@@ -87,4 +86,68 @@ body {
   font-style: oblique;
   align-self: center;
   color: #000000;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+#result-btn {
+  margin-right: 40px;
+  padding: 10px;
+  margin-top: 20px;
+  background: #2d5101;
+  color: #ffffff;
+  border-radius: 15px;
+  font-size: 32px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+#result-btn:hover {
+  transform: scale(1.1);
+}
+
+#reset-btn {
+  padding: 10px;
+  margin-top: 20px;
+  background: #f09e06;
+  color: #000;
+  border-radius: 15px;
+  font-size: 32px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+#reset-btn:hover {
+  transform: scale(1.1);
+}
+
+#message {
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    #d70603,
+    #dc2e68,
+    #6c2ed7,
+    #0880e2,
+    #10c0d7,
+    #248d2a,
+    #f49e14,
+    #f84610
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#winner,
+#draw {
+  font-weight: bold;
+  color: #190a5f;
+  font-size: 44px;
 }
